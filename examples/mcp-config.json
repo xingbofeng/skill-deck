@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "skill-deck": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "skill-deck",
+        "mcp",
+        "serve",
+        "--transport",
+        "stdio",
+        "--skills",
+        "/Users/you/.codex/skills"
+      ]
+    }
+  }
+}

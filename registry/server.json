@@ -1,0 +1,42 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.xingbofeng/skill-deck",
+  "description": "Expose local Agent Skills as adapter tools, MCP resources, MCP tools, and share artifacts.",
+  "version": "0.1.0",
+  "homepage": "https://skill.counterxing.top",
+  "repository": {
+    "url": "https://github.com/xingbofeng/skill-deck",
+    "source": "github",
+    "id": "1245667773"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "skill-deck",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio",
+        "command": "npx",
+        "args": [
+          "-y",
+          "skill-deck",
+          "mcp",
+          "serve",
+          "--transport",
+          "stdio",
+          "--skills",
+          "${SKILL_DECK_SKILLS_ROOT}"
+        ]
+      },
+      "environmentVariables": [
+        {
+          "name": "SKILL_DECK_SKILLS_ROOT",
+          "description": "Absolute path to the local Skill root directory exposed through SkillDeck.",
+          "isRequired": true,
+          "format": "string",
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "compact": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "skill-deck",
+      "mcp",
+      "serve",
+      "--transport",
+      "stdio",
+      "--skills",
+      "/Users/you/.codex/skills",
+      "--skill-mode",
+      "compact"
+    ]
+  },
+  "guided": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "skill-deck",
+      "mcp",
+      "serve",
+      "--transport",
+      "stdio",
+      "--skills",
+      "/Users/you/.codex/skills",
+      "--skill-mode",
+      "guided"
+    ]
+  },
+  "active": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "skill-deck",
+      "mcp",
+      "serve",
+      "--transport",
+      "stdio",
+      "--skills",
+      "/Users/you/.codex/skills",
+      "--skill-mode",
+      "active",
+      "--expose-skills",
+      "20"
+    ]
+  }
+}

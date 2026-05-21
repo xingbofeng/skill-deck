@@ -1,0 +1,40 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.xingbofeng/skill-deck",
+  "description": "Share, adapt, and activate local Agent Skills through MCP.",
+  "status": "active",
+  "repository": {
+    "url": "https://github.com/xingbofeng/skill-deck",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "skill-deck",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "command": "skill-deck",
+      "args": [
+        "mcp",
+        "serve",
+        "--transport",
+        "stdio",
+        "--skills",
+        "${AGENTIC_SKILL_ROOT}"
+      ],
+      "environmentVariables": [
+        {
+          "name": "AGENTIC_SKILL_ROOT",
+          "description": "Path to the local Agent Skills root.",
+          "isRequired": true,
+          "format": "string",
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}
